@@ -31,8 +31,8 @@ const PortfolioSection = () => {
     // Projects
     {
       id: "refun",
-      title: "Refun - Recycle is Fun",
-      description: "Refun is an Android application that promotes plastic bottle recycling through a point-based system, where users can scan QR codes to collect points and redeem them for rewards.",
+      title: "ReFun - Recycle is Fun",
+      description: "ReFun is an Android application that promotes plastic bottle recycling through a point-based system, where users can scan QR codes to collect points and redeem them for rewards.",
       image: "/assets/refun1.jpg",
       category: "projects",
       year: "2024",
@@ -40,21 +40,21 @@ const PortfolioSection = () => {
       githubUrl: "https://github.com/alvinjonathann/refun",
       liveUrl: "https://example.com",
       fullDescription:
-        "Refun is a mobile application built to encourage eco-friendly behavior by making recycling more engaging and rewarding. Users can scan QR codes from collection partners when exchanging plastic bottles, earning points that can later be redeemed for items from in-app reward catalog. The app also provides redemption history, notifications when points are sufficient, and real-time data synchronization with Firebase. With its simple interface and gamified approach, Refun modernizes recycling and makes it practical for everyday users.",
+        "ReFun is a mobile application built to encourage eco-friendly behavior by making recycling more engaging and rewarding. Users can scan QR codes from collection partners when exchanging plastic bottles, earning points that can later be redeemed for items from in-app reward catalog. The app also provides redemption history, notifications when points are sufficient, and real-time data synchronization with Firebase. With its simple interface and gamified approach, ReFun modernizes recycling and makes it practical for everyday users.",
       features: ["QR-based point collection system", "Reward catalog with redemption functionality", "Real-time synchronization with Firestore", "User-friendly and gamified experience"],
       techStack: ["Android", "Kotlin", "Java", "Firebase Firestore", "Firebase Authentication", "QR Code Integration"],
     },
     {
       id: "refun-owner",
-      title: "Refun Owener App",
-      description: "Refun Owner is the companion app for recycling partners, replacing costly vending machines by validating plastic bottles via barcode scanning and generating QR codes for users.",
+      title: "ReFun Owner App",
+      description: "ReFun Owner is the companion app for recycling partners, replacing costly vending machines by validating plastic bottles via barcode scanning and generating QR codes for users.",
       image: "/assets/ro1.jpg",
       category: "projects",
       year: "2024",
       technologies: ["Android", "Firebase", "ML Kit", "QR Code"],
       githubUrl: "https://github.com/alvinjonathann/refun_owner",
       fullDescription:
-        "Refun Owner is designed for collection partners and store owners to manage the plastic bottle exchange process. Instead of using expensive recycling vending machines, Refun Owner provides a cost-efficient digital solution with a barcode scanner powered by ML Kit to validate bottles against a central database. Once validated, the app generates a QR code that can be scanned by Refun to credit user points. Integration with Firebase Firestore ensures transparent data tracking, while the app simplifies operations for partners by automating bottle validation and point distribution.",
+        "ReFun Owner is designed for collection partners and store owners to manage the plastic bottle exchange process. Instead of using expensive recycling vending machines, ReFun Owner provides a cost-efficient digital solution with a barcode scanner powered by ML Kit to validate bottles against a central database. Once validated, the app generates a QR code that can be scanned by ReFun to credit user points. Integration with Firebase Firestore ensures transparent data tracking, while the app simplifies operations for partners by automating bottle validation and point distribution.",
       features: [
         "Barcode scanning for plastic bottle validation",
         "QR code generation for REFUN users",

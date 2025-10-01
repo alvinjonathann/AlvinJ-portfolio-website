@@ -60,22 +60,18 @@ const ConnectSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    // Reset form
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
 
-    // Show success message (you can implement a toast notification here)
     alert("Message sent successfully!");
   };
 
   const downloadResume = () => {
-    // Create a dummy resume download
     const link = document.createElement("a");
-    link.href = "/placeholder.svg?key=resume";
-    link.download = "Your_Name_Resume.pdf";
+    link.href = "https://drive.google.com/file/d/1JZE0AHepHSd0tbpVhW71xXshr4Vf-gg7/view?usp=sharing";
+    link.download = "public/CV-Alvin.pdf";
     link.click();
   };
 

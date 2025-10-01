@@ -45,7 +45,7 @@ const AboutSection = () => {
               miniAvatarUrl="/assets/profile.jpg"
               name="Alvin Jonathan"
               title="CS Student"
-              handle="yourhandle"
+              handle="Alvin Jonathan"
               status="Available"
               contactText="Contact"
               onContactClick={handleContactClick}

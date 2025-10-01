@@ -1,6 +1,7 @@
 import type React from "react";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,8 +23,8 @@ export const metadata = {
   title: "Portfolio - Computer Science Student",
   description: "Undergraduate Computer Science Student specializing in Software Development, AI/ML, and IoT",
   keywords: "portfolio, computer science, software development, AI, machine learning, IoT, web development",
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+  authors: [{ name: "Alvin Jonathan" }],
+  creator: "Alvin Jonathan",
   openGraph: {
     title: "Portfolio - Computer Science Student",
     description: "Undergraduate Computer Science Student specializing in Software Development, AI/ML, and IoT",
@@ -45,7 +46,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#8b5cf6" />
         <meta name="color-scheme" content="dark" />
       </head>
-      <body className="bg-background text-foreground overflow-x-hidden">{children}</body>
+      <body className="bg-background text-foreground overflow-x-hidden">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
