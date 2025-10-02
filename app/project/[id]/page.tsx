@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Github, Check, Calendar, Tag, User } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Check, Calendar, Cpu, User } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
@@ -43,7 +43,7 @@ const projectsData: Record<string, Project> = {
     fullDescription:
       "ReFun is a mobile application built to encourage eco-friendly behavior by making recycling more engaging and rewarding. Users can scan QR codes from collection partners when exchanging plastic bottles, earning points that can later be redeemed for items from the in-app reward catalog. The app also provides redemption history, notifications when points are sufficient, and real-time data synchronization with Firebase. With its simple interface and gamified approach, ReFun modernizes recycling and makes it practical for everyday users.",
     features: ["QR-based point collection system", "Reward catalog with redemption functionality", "Notifications for point milestones", "Real-time synchronization with Firestore", "User-friendly and gamified experience"],
-    techStack: ["Android (Java/Kotlin)", "Firebase Firestore", "Firebase Authentication", "QR Code Integration"],
+    techStack: ["Android", "Java", "Kotlin", "Firebase", "Firebase Authentication", "QR Code Integration"],
     images: ["/assets/refun1.jpg", "/assets/refun2.jpg", "/assets/refun3.jpg", "/assets/refun4.jpg", "/assets/refun5.jpg", "/assets/refun6.jpg"],
     challenges: ["Ensuring smooth QR code scanning across devices", "Handling real-time synchronization", "Maintaining consistent reward logic"],
     solutions: ["Integrated robust QR code libraries", "Optimized Firestore structure for real-time sync", "Designed scalable reward system"],
@@ -70,7 +70,7 @@ const projectsData: Record<string, Project> = {
       "Low-cost alternative to recycling vending machines",
       "Firestore integration for transparent record keeping",
     ],
-    techStack: ["Android (Java/Kotlin)", "Firebase Firestore", "ML Kit Barcode Scanner", "QR Code Generator"],
+    techStack: ["Android", "Java", "Kotlin", "Firebase", "ML Kit Barcode Scanner", "QR Code Generator"],
     images: ["/assets/ro1.jpg", "/assets/ro2.jpg", "/assets/ro3.jpg"],
     challenges: ["Ensuring accuracy in barcode validation", "Managing partner-side transaction records"],
     solutions: ["Implemented ML Kit for reliable scanning", "Optimized Firestore structure for transactions"],
@@ -91,7 +91,7 @@ const projectsData: Record<string, Project> = {
     fullDescription:
       "This project is an embedded safety system developed with Arduino Uno to detect and mitigate risks from gas leaks and fire. Using MQ-series gas sensors and flame sensors, the system monitors environmental conditions in real time. When gas is detected, it triggers alarms and activates the exhaust fan to disperse hazardous fumes. However, if both gas and fire are detected simultaneously, the system disables the fan to avoid spreading flames, ensuring safe operation. An LCD display provides status updates, while a buzzer serves as an immediate alert mechanism. Designed as a cost-efficient solution, this system can be deployed in residential and industrial environments to enhance safety.",
     features: ["Real-time gas and fire detection", "Automatic alarm and exhaust fan activation", "Smart fan control for safe operation in fire scenarios", "LCD status display for user awareness", "Low-cost, deployable safety solution"],
-    techStack: ["Arduino Uno R3", "MQ2 & MQ6 Gas Sensors", "Flame Sensor", "LCD 16x2", "Buzzer", "Exhaust Fan", "Embedded C"],
+    techStack: ["Arduino", "Sensors", "Embedded System", "C++"],
     images: ["/assets/gaski.jpg", "/assets/gas3.jpg", "/assets/gas4.jpg", "/assets/gas5.jpg", "/assets/gas6.jpg"],
     challenges: ["Integrating multiple sensor inputs", "Ensuring reliable alarm triggering"],
     solutions: ["Developed smart control algorithms", "Implemented logic for gas and fire scenarios"],
@@ -112,12 +112,12 @@ const projectsData: Record<string, Project> = {
     fullDescription:
       "Sport Sense is an AI-powered project that leverages Natural Language Processing (NLP) and transformer-based models to automatically classify sports news headlines. The system was trained and fine-tuned with a Kaggle dataset, achieving an average accuracy of 91% using DistilBERT. A keyword-based adjustment layer was also added to improve predictions for specific contexts. To make it practical, a Flask-based web application was built to allow users to input sports headlines and receive instant classifications in under one second. This solution provides a scalable and efficient approach for digital media platforms to automate news categorization.",
     features: ["Automatic classification of sports headlines", "DistilBERT-based NLP model with fine-tuning", "91% classification accuracy", "Keyword-based prediction adjustment", "Real-time classification through Flask web app"],
-    techStack: ["Python", "PyTorch", "Transformers", "BERT", "Scikit-learn", "Pandas", "Flask"],
+    techStack: ["Python", "PyTorch", "NLP", "Flask"],
     images: ["/assets/sport-classification.png"],
     challenges: ["Addressing dataset imbalance", "Deploying the model in a lightweight environment"],
     solutions: ["Applied stratified train-test split", "Deployed the model with Flask and optimized dependencies for lightweight usage"],
     learnings: ["Transformer fine-tuning", "Text preprocessing for NLP", "Web integration with Flask"],
-  }
+  },
 };
 
 export default function ProjectDetailPage({ params }: { params: { id: string } }) {
@@ -223,12 +223,12 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
         <div className="max-w-7xl mx-auto space-y-20">
           {/* Tech Stack */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-            <h2 className="text-3xl font-bold text-white mb-8">Tech Stack</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Tools and Frameworks</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {project.techStack.map((tech, index) => (
                 <motion.div key={index} whileHover={{ scale: 1.05 }} className="glass p-4 rounded-xl text-center hover-lift">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                    <Tag className="w-6 h-6 text-white" />
+                    <Cpu className="w-6 h-6 text-white" />
                   </div>
                   <span className="text-white font-medium">{tech}</span>
                 </motion.div>
