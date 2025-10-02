@@ -2,7 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
+
+const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "https://drive.google.com/file/d/1JZE0AHepHSd0tbpVhW71xXshr4Vf-gg7/view?usp=sharing";
+    link.download = "public/CV-Alvin.pdf";
+    link.click();
+  };
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,10 +60,11 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection("connect")}
-            className="hidden md:block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200"
+            onClick={downloadResume}
+            className="hidden md:flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200"
           >
-            Contact
+            <Download className="w-5 h-5" />
+            <span>Download Resume</span>
           </motion.button>
 
           {/* Mobile Menu Button */}
@@ -86,10 +94,10 @@ const Navbar = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navItems.length * 0.1 }}
-                  onClick={() => scrollToSection("connect")}
+                  onClick={downloadResume}
                   className="block w-full text-left px-4 py-2 mt-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-200"
                 >
-                  Contact
+                  Download Resume
                 </motion.button>
               </div>
             </motion.div>

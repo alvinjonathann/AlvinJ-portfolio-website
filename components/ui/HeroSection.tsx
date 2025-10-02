@@ -45,7 +45,7 @@ const HeroSection = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="text-lg sm:text-xl text-gray-400 mb-12 h-16 flex items-center justify-center">
             <TypeAnimation
-              sequence={["Passionate about Software Development", 2000, "Exploring AI & Machine Learning", 2000, "Building IoT Solutions", 2000, "Creating Digital Experiences", 2000]}
+              sequence={["Passionate about Web Development", 2000, "Building IoT Solutions", 2000, "Leveraging Digital Experiences", 2000]}
               wrapper="span"
               speed={50}
               repeat={Number.POSITIVE_INFINITY}

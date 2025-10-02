@@ -78,8 +78,8 @@ const AboutSection = () => {
                   <h4 className="font-semibold text-blue-400 mb-2">Focus Areas</h4>
                   <ul className="text-gray-300 space-y-1">
                     <li>• Front-End Development</li>
-                    <li>• Mobile Applications</li>
-                    <li>• Cloud Computing</li>
+                    <li>• Web Development</li>
+                    <li>• IoT</li>
                   </ul>
                 </div>
               </div>

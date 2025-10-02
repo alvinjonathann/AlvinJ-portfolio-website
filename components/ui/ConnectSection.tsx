@@ -154,7 +154,7 @@ const ConnectSection = () => {
             </div> */}
 
             {/* Resume Download */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.2 }} viewport={{ once: true }}>
+            {/* <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.2 }} viewport={{ once: true }}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -164,13 +164,12 @@ const ConnectSection = () => {
                 <Download className="w-5 h-5" />
                 <span>Download Resume</span>
               </motion.button>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Contact Form */}
           <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-            <div className="glass p-8 rounded-2xl">
-
+            <div className="glass p-10 rounded-2xl">
               <h3 className="text-2xl font-bold text-white mb-6">Connect with Me</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
@@ -270,6 +269,27 @@ const ConnectSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Resume Download */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-8" // ⬅️ tambahin mt-8
+        >
+          <div className="max-w-md w-full">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={downloadResume}
+              className="w-full flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 px-6 rounded-xl font-medium hover:shadow-lg transition-all duration-200"
+            >
+              <Download className="w-5 h-5" />
+              <span>Download Resume</span>
+            </motion.button>
+          </div>
+        </motion.div>
 
         {/* Footer */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }} className="text-center mt-20 pt-8 border-t border-gray-800">

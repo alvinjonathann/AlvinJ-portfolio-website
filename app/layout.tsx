@@ -20,21 +20,22 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Portfolio - Computer Science Student",
-  description: "Undergraduate Computer Science Student specializing in Software Development, AI/ML, and IoT",
-  keywords: "portfolio, computer science, software development, AI, machine learning, IoT, web development",
+  title: "Alvin Jonathan | Portfolio",
+  description: "Undergraduate Computer Science Student passionate in Web Development, Front-end Development, and IoT",
+  metadataBase: new URL("https://alvin-jonathan.vercel.app"),
+  keywords: "portfolio, computer science, software development, AI, machine learning, IoT, web development, alvin jonathan",
   authors: [{ name: "Alvin Jonathan" }],
   creator: "Alvin Jonathan",
   openGraph: {
-    title: "Portfolio - Computer Science Student",
-    description: "Undergraduate Computer Science Student specializing in Software Development, AI/ML, and IoT",
+    title: "Alvin Jonathan | Portfolio",
+    description: "Undergraduate Computer Science Student passionate in Web Development, Front-end Development, and IoT",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio - Computer Science Student",
-    description: "Undergraduate Computer Science Student specializing in Software Development, AI/ML, and IoT",
+    title: "Alvin Jonathan | Portfolio",
+    description: "Undergraduate Computer Science Student passionate in Web Development, Front-end Development, and IoT",
   },
 };
 
