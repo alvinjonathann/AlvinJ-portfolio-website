@@ -6,7 +6,7 @@ import HeroSection from "../components/ui/HeroSection";
 import AboutSection from "../components/ui/AboutSection";
 import PortfolioSection from "../components/ui/PortfolioSection";
 import ConnectSection from "../components/ui/ConnectSection";
-import ScrollToTop from "../components/ui/ScrollToTop";
+// import ScrollToTop from "../components/ui/ScrollToTop";
 import LoadingSpinner from "../components/ui/LoadingSpinner";
 
 export default function Home() {
@@ -26,13 +26,13 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background relative">
       <Navbar />
       <HeroSection />
       <AboutSection />
       <PortfolioSection />
       <ConnectSection />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </main>
   );
 }

@@ -46,7 +46,7 @@ const adjust = (value: number, fromMin: number, fromMax: number, toMin: number, 
 const easeInOutCubic = (x: number): number => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
-  avatarUrl = "/assets/profile.jpg",
+  avatarUrl = "/assets/profiles.jpg",
   iconUrl = "",
   grainUrl = "",
   behindGradient,

@@ -5,22 +5,50 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 
 const downloadResume = () => {
-    const link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/1JZE0AHepHSd0tbpVhW71xXshr4Vf-gg7/view?usp=sharing";
-    link.download = "public/CV-Alvin.pdf";
-    link.click();
-  };
+  const link = document.createElement("a");
+  link.href = "https://drive.google.com/file/d/1JZE0AHepHSd0tbpVhW71xXshr4Vf-gg7/view?usp=sharing";
+  link.download = "public/CV-Alvin.pdf";
+  link.click();
+};
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-50% 0px",
+        threshold: 0,
+      }
+    );
+
+    const sections = ["hero", "about", "portfolio", "connect"];
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) observer.unobserve(element);
+      });
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -49,9 +77,15 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <motion.button key={item.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => scrollToSection(item.id)} className="text-foreground hover:text-purple-400 transition-colors duration-200 relative group">
+              <motion.button
+                key={item.id}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection(item.id)}
+                className={`text-foreground transition-colors duration-200 relative group ${activeSection === item.id ? "text-purple-400" : "hover:text-purple-400"}`}
+              >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 transition-all duration-300 ${activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"}`}></span>
               </motion.button>
             ))}
           </div>

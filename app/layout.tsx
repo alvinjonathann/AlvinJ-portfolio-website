@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#8b5cf6" />
         <meta name="color-scheme" content="dark" />
       </head>
-      <body className="bg-background text-foreground overflow-x-hidden">
+      <body className="bg-background text-foreground overflow-x-hidden overflow-y-auto min-h-screen">
         {children}
         <SpeedInsights />
       </body>

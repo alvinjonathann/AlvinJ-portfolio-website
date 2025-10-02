@@ -35,7 +35,7 @@ const projectsData: Record<string, Project> = {
     description: "ReFun is an Android application that promotes plastic bottle recycling through a point-based system, where users can scan QR codes to collect points and redeem them for rewards.",
     image: "/assets/refun1.jpg",
     category: "projects",
-    year: "2024",
+    year: "2025",
     duration: "3 months",
     role: "Full-Stack Mobile Development",
     technologies: ["Android", "Firebase", "Kotlin", "Java"],
@@ -56,7 +56,7 @@ const projectsData: Record<string, Project> = {
     description: "ReFun Owner is the companion app for recycling partners, replacing costly vending machines by validating plastic bottles via barcode scanning and generating QR codes for users.",
     image: "/assets/ro1.jpg",
     category: "projects",
-    year: "2024",
+    year: "2025",
     duration: "3 months",
     role: "Full-Stack Mobile Development",
     technologies: ["Android", "Firebase", "ML Kit", "QR Code"],
@@ -75,6 +75,27 @@ const projectsData: Record<string, Project> = {
     challenges: ["Ensuring accuracy in barcode validation", "Managing partner-side transaction records"],
     solutions: ["Implemented ML Kit for reliable scanning", "Optimized Firestore structure for transactions"],
     learnings: ["ML Kit integration", "Mobile app for Android", "Firebase integration"],
+  },
+
+  "gas-leak": {
+    id: "gas-leak",
+    title: "Gas Leak and Fire Mitigation System",
+    description: "An Arduino-based embedded system that detects gas leaks and fire hazards, activating alarms and an exhaust fan for mitigation while ensuring safe operation.",
+    image: "/assets/gaski.jpg",
+    category: "projects",
+    year: "2025",
+    duration: "2 months",
+    role: "Embedded Systems",
+    technologies: ["Arduino", "Embedded C", "IoT", "Sensors"],
+    githubUrl: "https://github.com/alvinjonathann/Gas-Leak-and-Flame-Detection-System-with-Auto-Fan-Control-and-Real-Time-Display",
+    fullDescription:
+      "This project is an embedded safety system developed with Arduino Uno to detect and mitigate risks from gas leaks and fire. Using MQ-series gas sensors and flame sensors, the system monitors environmental conditions in real time. When gas is detected, it triggers alarms and activates the exhaust fan to disperse hazardous fumes. However, if both gas and fire are detected simultaneously, the system disables the fan to avoid spreading flames, ensuring safe operation. An LCD display provides status updates, while a buzzer serves as an immediate alert mechanism. Designed as a cost-efficient solution, this system can be deployed in residential and industrial environments to enhance safety.",
+    features: ["Real-time gas and fire detection", "Automatic alarm and exhaust fan activation", "Smart fan control for safe operation in fire scenarios", "LCD status display for user awareness", "Low-cost, deployable safety solution"],
+    techStack: ["Arduino Uno R3", "MQ2 & MQ6 Gas Sensors", "Flame Sensor", "LCD 16x2", "Buzzer", "Exhaust Fan", "Embedded C"],
+    images: ["/assets/gaski.jpg", "/assets/gas3.jpg", "/assets/gas4.jpg", "/assets/gas5.jpg", "/assets/gas6.jpg"],
+    challenges: ["Integrating multiple sensor inputs", "Ensuring reliable alarm triggering"],
+    solutions: ["Developed smart control algorithms", "Implemented logic for gas and fire scenarios"],
+    learnings: ["Embedded systems design", "Sensor integration", "Real-world application"],
   },
 
   "sport-sense": {
@@ -96,28 +117,7 @@ const projectsData: Record<string, Project> = {
     challenges: ["Addressing dataset imbalance", "Deploying the model in a lightweight environment"],
     solutions: ["Applied stratified train-test split", "Deployed the model with Flask and optimized dependencies for lightweight usage"],
     learnings: ["Transformer fine-tuning", "Text preprocessing for NLP", "Web integration with Flask"],
-  },
-
-  "gas-leak": {
-    id: "gas-leak",
-    title: "Gas Leak and Fire Mitigation System",
-    description: "An Arduino-based embedded system that detects gas leaks and fire hazards, activating alarms and an exhaust fan for mitigation while ensuring safe operation.",
-    image: "/assets/gas2.jpg",
-    category: "projects",
-    year: "2024",
-    duration: "2 months",
-    role: "Embedded Systems",
-    technologies: ["Arduino", "Embedded C", "IoT", "Sensors"],
-    githubUrl: "https://github.com/alvinjonathann/Gas-Leak-and-Flame-Detection-System-with-Auto-Fan-Control-and-Real-Time-Display",
-    fullDescription:
-      "This project is an embedded safety system developed with Arduino Uno to detect and mitigate risks from gas leaks and fire. Using MQ-series gas sensors and flame sensors, the system monitors environmental conditions in real time. When gas is detected, it triggers alarms and activates the exhaust fan to disperse hazardous fumes. However, if both gas and fire are detected simultaneously, the system disables the fan to avoid spreading flames, ensuring safe operation. An LCD display provides status updates, while a buzzer serves as an immediate alert mechanism. Designed as a cost-efficient solution, this system can be deployed in residential and industrial environments to enhance safety.",
-    features: ["Real-time gas and fire detection", "Automatic alarm and exhaust fan activation", "Smart fan control for safe operation in fire scenarios", "LCD status display for user awareness", "Low-cost, deployable safety solution"],
-    techStack: ["Arduino Uno R3", "MQ2 & MQ6 Gas Sensors", "Flame Sensor", "LCD 16x2", "Buzzer", "Exhaust Fan", "Embedded C"],
-    images: ["/assets/gas2.jpg", "/assets/gas3.jpg", "/assets/gas4.jpg", "/assets/gas5.jpg", "/assets/gas6.jpg"],
-    challenges: ["Integrating multiple sensor inputs", "Ensuring reliable alarm triggering"],
-    solutions: ["Developed smart control algorithms", "Implemented logic for gas and fire scenarios"],
-    learnings: ["Embedded systems design", "Sensor integration", "Real-world application"],
-  },
+  }
 };
 
 export default function ProjectDetailPage({ params }: { params: { id: string } }) {

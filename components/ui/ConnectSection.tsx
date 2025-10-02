@@ -276,7 +276,7 @@ const ConnectSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex justify-center mt-8" // ⬅️ tambahin mt-8
+          className="flex justify-center mt-8"
         >
           <div className="max-w-md w-full">
             <motion.button

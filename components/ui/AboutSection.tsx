@@ -7,16 +7,18 @@ import { Code, Database, Globe, Smartphone, Brain, Cpu, Cloud, GitBranch, Termin
 
 const AboutSection = () => {
   const techLogos = [
-    { node: <Code className="w-8 h-8 text-blue-400" />, title: "React" },
-    { node: <Database className="w-8 h-8 text-green-400" />, title: "Node.js" },
-    { node: <Globe className="w-8 h-8 text-purple-400" />, title: "TypeScript" },
-    { node: <Smartphone className="w-8 h-8 text-cyan-400" />, title: "React Native" },
-    { node: <Brain className="w-8 h-8 text-pink-400" />, title: "Python" },
-    { node: <Cpu className="w-8 h-8 text-orange-400" />, title: "TensorFlow" },
-    { node: <Cloud className="w-8 h-8 text-indigo-400" />, title: "AWS" },
-    { node: <GitBranch className="w-8 h-8 text-red-400" />, title: "Git" },
-    { node: <Terminal className="w-8 h-8 text-yellow-400" />, title: "Docker" },
-    { node: <Zap className="w-8 h-8 text-emerald-400" />, title: "MongoDB" },
+    { node: <img src="/assets/react.svg" className="w-10 h-10" />, title: "React" },
+    { node: <img src="/assets/typescript.svg" className="w-10 h-10" />, title: "TypeScript" },
+    { node: <img src="/assets/tailwindcss.svg" className="w-10 h-10" />, title: "Tailwind" },
+    { node: <img src="/assets/firebase.svg" className="w-10 h-10" />, title: "Firebase" },
+    { node: <img src="/assets/arduino.svg" className="w-10 h-10" />, title: "Arduino" },
+    { node: <img src="/assets/c.svg" className="w-10 h-10" />, title: "C" },
+    { node: <img src="/assets/c++.svg" className="w-10 h-10" />, title: "C++" },
+    { node: <img src="/assets/python.svg" className="w-10 h-10" />, title: "Python" },
+    { node: <img src="/assets/kotlin.svg" className="w-10 h-10" />, title: "Kotlin" },
+    // { node: <img src="/assets/java.svg" className="w-10 h-10" />, title: "java" },
+    // { node: <img src="/assets/js.svg" className="w-10 h-10" />, title: "JavaScript" },
+    { node: <img src="/assets/android.svg" className="w-10 h-10" />, title: "Android" },
   ];
 
   const handleContactClick = () => {
@@ -41,8 +43,8 @@ const AboutSection = () => {
           {/* Profile Card */}
           <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="flex justify-center">
             <ProfileCard
-              avatarUrl="/assets/profile.jpg"
-              miniAvatarUrl="/assets/profile.jpg"
+              avatarUrl="/assets/profiles.jpg"
+              miniAvatarUrl="/assets/profiles.jpg"
               name="Alvin Jonathan"
               title="CS Student"
               handle="Alvin Jonathan"
@@ -59,10 +61,12 @@ const AboutSection = () => {
             <div className="glass p-6 sm:p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-white mb-4">Hello, World !</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                I am an undergraduate Computer Science student at Binus University Bandung with a strong interest in web development, embedded systems, and IoT. I enjoy learning new technologies, building practical projects, and applying problem-solving skills to create impactful solutions.
+                I am an undergraduate Computer Science student at Binus University Bandung with a strong interest in web development, embedded systems, and IoT. I enjoy learning new technologies, building practical projects, and applying
+                problem-solving skills to create impactful solutions.
               </p>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Beyond academics, I am also eager to continuously learn and adapt to new challenges in the tech industry. I believe that combining creativity with technical skills is the key to building impactful digital solutions. With a growth mindset and curiosity, I am motivated to contribute to meaningful projects while expanding my knowledge and expertise.
+                Beyond academics, I am also eager to continuously learn and adapt to new challenges in the tech industry. I believe that combining creativity with technical skills is the key to building impactful digital solutions. With a
+                growth mindset and curiosity, I am motivated to contribute to meaningful projects while expanding my knowledge and expertise.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -89,8 +93,10 @@ const AboutSection = () => {
 
         {/* Tech Stack Carousel */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }}>
-          <h3 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8">Technologies I Work With</h3>
-          <LogoLoop logos={techLogos} speed={50} direction="left" logoHeight={32} gap={48} pauseOnHover={true} fadeOut={true} scaleOnHover={true} className="py-8" />
+          <h3 className="text-4xl sm:text-5xl font-bold text-center text-white mb-10">
+            Technologies <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600 bg-clip-text text-transparent">I Work With</span>
+          </h3>
+          <LogoLoop {...({ logos: techLogos, speed: 50, direction: "left", logoHeight: 32, gap: 48, pauseOnHover: true, fadeOut: true, scaleOnHover: true, className: "py-8" } as any)} />
         </motion.div>
       </div>
     </section>

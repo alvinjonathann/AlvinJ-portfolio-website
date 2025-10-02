@@ -35,10 +35,9 @@ const PortfolioSection = () => {
       description: "ReFun is an Android application that promotes plastic bottle recycling through a point-based system, where users can scan QR codes to collect points and redeem them for rewards.",
       image: "/assets/refun1.jpg",
       category: "projects",
-      year: "2024",
+      year: "2025",
       technologies: ["Android", "Firebase", "Java", "Kotlin"],
       githubUrl: "https://github.com/alvinjonathann/refun",
-      liveUrl: "https://example.com",
       fullDescription:
         "ReFun is a mobile application built to encourage eco-friendly behavior by making recycling more engaging and rewarding. Users can scan QR codes from collection partners when exchanging plastic bottles, earning points that can later be redeemed for items from in-app reward catalog. The app also provides redemption history, notifications when points are sufficient, and real-time data synchronization with Firebase. With its simple interface and gamified approach, ReFun modernizes recycling and makes it practical for everyday users.",
       features: ["QR-based point collection system", "Reward catalog with redemption functionality", "Real-time synchronization with Firestore", "User-friendly and gamified experience"],
@@ -50,7 +49,7 @@ const PortfolioSection = () => {
       description: "ReFun Owner is the companion app for recycling partners, replacing costly vending machines by validating plastic bottles via barcode scanning and generating QR codes for users.",
       image: "/assets/ro1.jpg",
       category: "projects",
-      year: "2024",
+      year: "2025",
       technologies: ["Android", "Firebase", "ML Kit", "QR Code"],
       githubUrl: "https://github.com/alvinjonathann/refun_owner",
       fullDescription:
@@ -65,6 +64,27 @@ const PortfolioSection = () => {
       techStack: ["Android", "Kotlin", "Java", "Firebase Firestore", "ML Kit Barcode Scanner", "QR Code Generator"],
     },
     {
+      id: "gas-leak",
+      title: "Gas Leak and Fire Mitigation System",
+      description: "An Arduino-based embedded system that detects gas leaks and fire hazards, activating alarms and an exhaust fan for mitigation while ensuring safe operation.",
+      image: "/assets/gaski.jpg",
+      category: "projects",
+      year: "2025",
+      technologies: ["Arduino", "Sensors", "C++"],
+      githubUrl: "https://github.com/alvinjonathann/Gas-Leak-and-Flame-Detection-System-with-Auto-Fan-Control-and-Real-Time-Display",
+      liveUrl: "https://drive.google.com/file/d/1MyYCWkp4B9IRuQCxV5_H_aRNcAMMgCEs/view?usp=sharing",
+      fullDescription:
+      "This project is an embedded safety system developed with Arduino Uno to detect and mitigate risks from gas leaks and fire. Using MQ-series gas sensors and flame sensors, the system monitors environmental conditions in real time. When gas is detected, it triggers alarms and activates the exhaust fan to disperse hazardous fumes. However, if both gas and fire are detected simultaneously, the system disables the fan to avoid spreading flames, ensuring safe operation. An LCD display provides status updates, while a buzzer serves as an immediate alert mechanism. Designed as a cost-efficient solution, this system can be deployed in residential and industrial environments to enhance safety.",
+      features: [
+        "Real-time gas and fire detection",
+        "Automatic alarm and exhaust fan activation",
+        "Smart fan control for safe operation in fire scenarios",
+        "LCD status display for user awareness",
+        "Low-cost and deployable safety solution",
+      ],
+      techStack: ["Arduino", "Sensors", "C++"],
+    },
+    {
       id: "sport-sense",
       title: "Sport Sense - AI Sports Classification",
       description: "Sport Sense is an NLP-based system that classifies sports news headlines into categories like football, basketball, etc using various machine learning model and achieved 91% accuracy with DistilBERT.",
@@ -77,20 +97,6 @@ const PortfolioSection = () => {
         "Sport Sense is an AI-powered project that leverages Natural Language Processing (NLP) and transformer-based models to automatically classify sports news headlines. The system was trained and fine-tuned with a Kaggle dataset, achieving an average accuracy of 91% using DistilBERT. A keyword-based adjustment layer was also added to improve predictions for specific contexts. To make it practical, a Flask-based web application was built to allow users to input sports headlines and receive instant classifications in under one second. This solution provides a scalable and efficient approach for digital media platforms to automate news categorization.",
       features: ["Automatic classification of sports headlines", "DistilBERT-based NLP model with fine-tuning", "91% classification accuracy", "Keyword-based prediction adjustment", "Real-time classification through Flask web app"],
       techStack: ["Python", "PyTorch", "NLP", "Flask"],
-    },
-    {
-      id: "gas-leak",
-      title: "Gas Leak and Fire Mitigation System",
-      description: "An Arduino-based embedded system that detects gas leaks and fire hazards, activating alarms and an exhaust fan for mitigation while ensuring safe operation.",
-      image: "/assets/gas2.jpg",
-      category: "projects",
-      year: "2024",
-      technologies: ["Arduino", "Sensors", "C++"],
-      githubUrl: "https://github.com/alvinjonathann/Gas-Leak-and-Flame-Detection-System-with-Auto-Fan-Control-and-Real-Time-Display",
-      fullDescription:
-        "This project is an embedded safety system developed with Arduino Uno to detect and mitigate risks from gas leaks and fire. Using MQ-series gas sensors and flame sensors, the system monitors environmental conditions in real time. When gas is detected, it triggers alarms and activates the exhaust fan to disperse hazardous fumes. However, if both gas and fire are detected simultaneously, the system disables the fan to avoid spreading flames, ensuring safe operation. An LCD display provides status updates, while a buzzer serves as an immediate alert mechanism. Designed as a cost-efficient solution, this system can be deployed in residential and industrial environments to enhance safety.",
-      features: ["Real-time gas and fire detection", "Automatic alarm and exhaust fan activation", "Smart fan control for safe operation in fire scenarios", "LCD status display for user awareness", "Low-cost and deployable safety solution"],
-      techStack: ["Arduino", "Sensors", "C++"],
     },
     // Licenses & Certifications
     {
@@ -130,7 +136,7 @@ const PortfolioSection = () => {
       fullDescription: `During my remote internship at Blossombiz, I worked as a Web Developer focusing on building and improving user-facing applications. My main responsibilities included developing static websites and implementing API calling to ensure real-time data updates. I utilized modern front-end technologies such as React, Tailwind CSS, Motion, and Reactbits to create responsive, interactive, and visually appealing interfaces.
       
       I collaborated with the team through Bitbucket for version control and task management, ensuring smooth workflow and code integration. Throughout the internship, I consistently delivered tasks on time, improved my understanding of API integration and UI/UX best practices, and gained valuable experience working in a remote, collaborative environment.`,
-      features: ["Web Development", "API Integration", "Team Collaboration","Time Management"],
+      features: ["Web Development", "API Integration", "Team Collaboration", "Time Management"],
       techStack: ["React", "Typescript", "Tailwind CSS", "Vercel", "Git", "Bitbucket"],
     },
     // {
@@ -251,7 +257,7 @@ const PortfolioSection = () => {
                     <motion.button
                       onClick={(e) => {
                         e.stopPropagation();
-                        router.push(`/project/${item.id}`);
+                        openModal(item);
                       }}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
