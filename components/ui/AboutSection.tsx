@@ -16,8 +16,8 @@ const AboutSection = () => {
     { node: <img src="/assets/c++.svg" className="w-10 h-10" />, title: "C++" },
     { node: <img src="/assets/python.svg" className="w-10 h-10" />, title: "Python" },
     { node: <img src="/assets/kotlin.svg" className="w-10 h-10" />, title: "Kotlin" },
-    // { node: <img src="/assets/java.svg" className="w-10 h-10" />, title: "java" },
-    // { node: <img src="/assets/js.svg" className="w-10 h-10" />, title: "JavaScript" },
+    { node: <img src="/assets/vite.svg" className="w-10 h-10" />, title: "vite" },
+    { node: <img src="/assets/js.svg" className="w-10 h-10" />, title: "JavaScript" },
     { node: <img src="/assets/android.svg" className="w-10 h-10" />, title: "Android" },
   ];
 

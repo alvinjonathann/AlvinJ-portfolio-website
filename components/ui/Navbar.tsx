@@ -6,7 +6,7 @@ import { Menu, X, Download } from "lucide-react";
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "https://drive.google.com/file/d/1JZE0AHepHSd0tbpVhW71xXshr4Vf-gg7/view?usp=sharing";
+  link.href = "https://drive.google.com/file/d/1aF1SoeHXQON7W7CWfcSwKHLkqsTeAK4f/view?usp=sharing";
   link.download = "public/CV-Alvin.pdf";
   link.click();
 };
