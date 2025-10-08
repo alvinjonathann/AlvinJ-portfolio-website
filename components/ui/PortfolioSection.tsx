@@ -128,29 +128,17 @@ const PortfolioSection = () => {
     {
       id: "blossom",
       title: "Web Developer Intern",
-      description: "Contributed to web development projects using React, Tailwind, and Motion. Built static websites and implemented API calling for dynamic data updates while collaborating with the team through Bitbucket.",
+      description: "Contributed to web development projects using React, Tailwind, and Motion. Built websites and implemented API calling for dynamic data updates while collaborating with the team through Bitbucket.",
       image: "/assets/blossom-logo.jpg",
       category: "experience",
       year: "2025",
-      technologies: ["React", "Typescript", "Tailwind CSS", "Vercel"],
-      fullDescription: `During my remote internship at Blossombiz, I worked as a Web Developer focusing on building and improving user-facing applications. My main responsibilities included developing static websites and implementing API calling to ensure real-time data updates. I utilized modern front-end technologies such as React, Tailwind CSS, Motion, and Reactbits to create responsive, interactive, and visually appealing interfaces.
+      technologies: ["React", "Typescript", "Tailwind CSS", "Vite", "Vercel"],
+      fullDescription: `During my internship at Blossombiz, I worked as a Web Developer focusing on building company profile websites and implementing responsive interface design. My main responsibilities included developing websites and implementing API calling to ensure real-time data updates. I utilized modern front-end technologies such as React, Tailwind CSS, Motion, and Reactbits to create responsive, interactive, and visually appealing interfaces.
       
-      I collaborated with the team through Bitbucket for version control and task management, ensuring smooth workflow and code integration. Throughout the internship, I consistently delivered tasks on time, improved my understanding of API integration and UI/UX best practices, and gained valuable experience working in a remote, collaborative environment.`,
+      I collaborated with the team through Bitbucket for version control and task management, ensuring smooth workflow and code integration. Throughout the internship, I consistently delivered tasks on time, improved my understanding of API integration and Front-End layouting through practices, and gained valuable experience working in a remote, collaborative environment.`,
       features: ["Web Development", "API Integration", "Team Collaboration", "Time Management"],
-      techStack: ["React", "Typescript", "Tailwind CSS", "Vercel", "Git", "Bitbucket"],
+      techStack: ["React", "Typescript", "Tailwind CSS", "Vite", "Vercel", "Git", "Bitbucket"],
     },
-    // {
-    //   id: "freelance",
-    //   title: "Freelance Web Developer",
-    //   description: "Independent web development projects for various clients",
-    //   image: "/freelance-web-development.jpg",
-    //   category: "experience",
-    //   year: "2023-2024",
-    //   technologies: ["JavaScript", "React", "WordPress"],
-    //   fullDescription: "Provided freelance web development services to small businesses and startups, creating responsive websites, e-commerce solutions, and custom web applications.",
-    //   features: ["Client Communication", "Project Management", "Custom Solutions", "Responsive Design", "SEO Optimization"],
-    //   techStack: ["HTML", "CSS", "JavaScript", "React", "WordPress", "PHP"],
-    // },
   ];
 
   const filters = [
